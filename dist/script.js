@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.valueEl = this.select.querySelector('.select__value');
       this.dropdown = this.select.querySelector('.select__dropdown');
       this.options = this.dropdown.querySelectorAll('.select__option');
-      this.nativeSelect = document.getElementById(this.select.dataset.selectId);
+      this.hiddenInput = this.select.querySelector('input[type="hidden"]');
       this.isOpen = false;
 
       this.initEvents();
@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateValue(option) {
       const value = option.dataset.value;
       const text = option.textContent;  
-      this.valueEl.textContent = text.trim(); 
-      this.nativeSelect.value = value;
-      this.nativeSelect.dispatchEvent(
-        new Event('change', { bubbles: true })
-      );
+      this.valueEl.textContent = text.trim();
+      if (this.hiddenInput) {
+        this.hiddenInput.value = value;
+      }
+      this.select.dispatchEvent(new Event('change', { bubbles: true }));
     }
 
     initEvents() {
