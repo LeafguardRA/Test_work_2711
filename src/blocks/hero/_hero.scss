@@ -1,0 +1,155 @@
+.hero {
+  background-image: url('../src/img/hero-600.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a2d;
+  margin-top: -40px;
+
+    &__content {
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+    &__title {
+    color: #000;
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-size: 28px;
+    }
+
+    &__highlight {
+        color: #42A9ED;
+        font-weight: 800;
+    }
+
+    &__text {
+        color: #000;
+        margin-bottom: 24px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+    }
+
+    &__lead {
+        margin: 0 0 10px 0;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 0 10px 0;
+        list-style: none;
+        font-weight: 400;
+    }
+
+    &__list-item {
+        position: relative;
+        margin: 0;
+        padding-left: 26px;
+
+        &::before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5em;
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        .btn {
+            margin:10px;
+            padding: 15px 10px;
+            font-size: 13px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            @media (min-width: 768px){
+              width: 183px;
+              margin: 0;
+            }
+        }
+
+        .btn--primary {
+            background-color: $primary-color;
+            color: $secondary-color;
+            border: 1px solid $secondary-color;
+
+            &:hover {
+              background-color: $secondary-color;
+              color: $primary-color;
+              border-color: $primary-color;
+              transition: 0.3s ease-out;
+            }
+        }
+        .btn--secondary{
+            background-color: $secondary-color;
+            color: #000;
+            border: 1px solid #6F6D7B;
+
+            &:hover {
+              color: $primary-color;
+              border-color: $primary-color;
+              transition: 0.3s ease-out;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('../src/img/hero-1200.png');
+    margin-top: -100px;
+    
+    &__content {
+      max-width: 500px;
+      text-align: left;
+    }
+    
+    &__text {
+      font-size: 20px;
+      margin-bottom: 80px
+    }
+    
+    &__buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 16px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-image: url('../src/img/hero-1920.png');
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 80px
+    }
+    
+    &__content {
+      max-width: 780px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: auto;
+      transform: translateY(-80px);
+    }
+  }
+}

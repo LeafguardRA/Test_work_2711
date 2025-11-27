@@ -1,0 +1,39 @@
+// Переменные
+$primary-color: #3E9CDC;
+$secondary-color: #FFFFFF;
+$support-color: #286690;
+$font-primary: 'Lato', sans-serif;
+
+// Общие стили
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+.container {
+    width: 100%;
+    max-width: 1172px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+}
+
+// Импорт блоков
+@import "blocks/header/header.scss";
+@import "blocks/hero/hero.scss";
+@import "blocks/content/content.scss";
+@import "blocks/footer/footer.scss";
+@import "components/select";

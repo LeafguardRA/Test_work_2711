@@ -1,0 +1,148 @@
+.footer {
+  background-color: #3D4050;
+  padding: 16px 0;
+  color: $secondary-color;
+  text-shadow: 0px 0px 5px #000;
+
+  @media (min-width: 768px) {
+    padding: 24px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 32px 0;
+  }
+
+  &__copyright,
+  &__payment,
+  &__social {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 15px auto;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 12px;
+      font-size: 14px;
+
+      &::after {
+      content: '';
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 100%;
+      background-color: $secondary-color;
+    }
+    }
+
+    .footer__year,
+    .footer__site-name,
+    .footer__rights {
+      white-space: nowrap;
+      font-size: 13px;
+
+      @media (min-width: 768px){
+        font-size: 14px;
+        white-space: normal;
+      }
+    }
+  }
+
+  &__payment {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    flex-direction: row;
+
+    &_payment-logo {
+      height: 20px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    &__payment-item {
+      margin: 12px;  
+    }
+
+    @media (min-width: 768px) {
+      margin: 15px auto 0;
+    }
+    }
+
+    &__payment-name {
+      display: none;
+
+      @media (min-width: 768px) {
+        display:contents;
+      }
+
+    }
+  
+  &__payment svg {
+        transform: translateY(15%);
+      }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+
+    &_social-item {
+      margin: 12px;
+    }
+
+    @media (min-width: 768px) {
+      gap: 12px;
+    
+      &::before {
+      content: '';
+      position: absolute;
+      left: 8%;;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 100%;
+      background-color: $secondary-color;
+      }
+    }  
+  }
+  
+  &__social-link {
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    color: $secondary-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    @media (min-width: 768px) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
