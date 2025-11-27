@@ -82,8 +82,10 @@
     }
 
     &__payment-item {
-      margin: 12px;  
+      margin: 12px;
+      
     }
+
 
     @media (min-width: 768px) {
       margin: 15px auto 0;
@@ -101,6 +103,7 @@
   
   &__payment svg {
         transform: translateY(15%);
+        margin-right: 10px;
       }
 
   &__social {
@@ -144,5 +147,9 @@
       width: 28px;
       height: 28px;
     }
+  }
+
+  &__social-name {
+    margin-left: 10px;
   }
 }
