@@ -113,6 +113,10 @@
     gap: 10px;
     position: relative;
 
+    @media (min-width: 768px) {
+      justify-content: right;
+    }
+    
     &_social-item {
       margin: 12px;
     }
@@ -123,7 +127,7 @@
       &::before {
       content: '';
       position: absolute;
-      left: 8%;;
+      left: 15%;;
       top: 50%;
       transform: translateY(-50%);
       width: 1px;
